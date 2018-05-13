@@ -4,6 +4,9 @@
 ## Live demo
 * Github Live Page - [Live Demo](https://alkuca.github.io/ArcadeGame/)
 
+## Features
+* Bugs move at random Speed
+* Player - Bug collision
 
 ## Game Rules
 * Arcade Game is played by moving the arrow keys on the keyboard
