@@ -1,8 +1,9 @@
 # Arcade Game Project
 * Udacity Project - object oriented JavaScript
 
-## Live demo
-* Github Live Page - [Live Demo](https://alkuca.github.io/ArcadeGame/)
+## Live Game
+* To play the game open the link bellow or download the files and run index.html in a browser
+* Github Live Page - Play the game here - [Live Game](https://alkuca.github.io/ArcadeGame/)
 
 ## Features
 * Bugs move at random Speed

@@ -1,7 +1,7 @@
 body {
     text-align: center;
-
 }
+
 .bg {
     background-color: white;
     height: 556px;
@@ -29,12 +29,12 @@ body {
     text-align: center;
 }
 
-.flash-red{
+.flash-red {
     animation-name: flash-red;
     animation-duration: 0.2s;
 }
 
-.flash-green{
+.flash-green {
     animation-name: flash-green;
     animation-duration: 0.2s;
 }

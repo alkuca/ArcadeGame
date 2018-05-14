@@ -1,3 +1,4 @@
+// Udacity project - Arcade Game
 
 var Enemy = function(speed,x,y) {
     this.sprite = 'images/enemy-bug.png';
@@ -8,6 +9,7 @@ var Enemy = function(speed,x,y) {
     this.height = 50;
 };
 
+//handles the reappearing of bugs and gives them random speed
 Enemy.prototype.update = function(dt) {
     this.x += this.speed * dt;
     const resetBugPosition = -100;
@@ -30,6 +32,7 @@ var Player = function(x,y) {
     this.height = 50;
 };
 
+//creates enemy objects and pushes them into a array
 var enemyOne = new Enemy(randomSpeed(), -100, 220);
 var enemyTwo = new Enemy(randomSpeed(), -250, 140);
 var enemyThree = new Enemy(randomSpeed(), -300, 55);
@@ -39,13 +42,8 @@ allEnemies.push(enemyOne,enemyTwo,enemyThree,enemyFour);
 
 var player = new Player(200,300);
 
-player.update = function(dt) {
-    if (this.y === -20){
-        flashGreen();
-        setTimeout(function(){ flasher.classList.remove("flash-green"); }, 300);
-        win();
-        resetGame();
-    }
+//runs on every frame
+Player.prototype.update = function(dt) {
     this.checkCollisions();
 };
 
@@ -63,8 +61,8 @@ document.addEventListener('keyup', function(e) {
     player.handleInput(allowedKeys[e.keyCode]);
 });
 
-// moves 100 pixels left or right and 80
-player.handleInput = function(move){
+// moves 100 pixels left or right and 80 pixels up or down
+Player.prototype.handleInput = function(move){
     if(move === "left" && this.x > 0 ){
         this.x -= 100;
     }
@@ -76,6 +74,12 @@ player.handleInput = function(move){
     }
     if(move === "down" && this.y < 320){
         this.y += 80;
+    }
+    if (this.y === -20){
+        flashGreen();
+        setTimeout(function(){ flasher.classList.remove("flash-green"); }, 300);
+        win();
+        resetGame();
     }
 };
 
